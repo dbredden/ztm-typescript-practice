@@ -9,4 +9,20 @@
 
 import { strict as assert } from "assert";
 
+const firstName = 'Danny'
+const lastName = 'Redden'
+function myFirstName() {
+    console.log(firstName)
+}
 
+function myLastName() {
+    console.log(lastName)
+}
+myFirstName();
+myLastName();
+
+function fullName() {
+    console.log(firstName, lastName)
+}
+
+fullName();
