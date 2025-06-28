@@ -10,3 +10,73 @@ import { strict as assert } from "assert";
 // Useful links:
 // https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Statements/if...else
 //
+
+const answer = 2 + 2
+assert.equal(answer, 4);
+
+if (answer > 4) {
+    console.log(">4");
+}
+
+if (answer === 4) {
+    console.log(">4");
+} else {
+    console.log("!4");
+}
+
+
+if (answer < 4) {
+    console.log("<4");
+} else if (answer > 4) {
+    console.log(">4");
+} else {
+    console.log("=4");
+}
+
+const age = 6;
+const likesHavingFun = true;
+
+if (age <= 12 && likesHavingFun) {
+    // play at the park
+} else if (age > 12 && !likesHavingFun) {
+    // be bored
+} else {
+    // work on hobbies
+}
+
+
+const hasTheSkills = true;
+const day = "Tuesday";
+const hoursWorked = 9;
+const totalOvertime = 0.5;
+const holidaySeason = false;
+
+function approveMoreWork() {
+    if (!hasTheSkills) {
+        return;
+    }
+
+    if (hasOvertimeHours(hoursWorked, totalOvertime)) {
+        return;
+    }
+
+    if (!isBusyDay(day, holidaySeason)) {
+        return;
+    }
+
+    // monthly max
+    // no late employees
+
+    // approve work
+}
+
+
+function isBusyDay(day: string, holidaySeason: boolean): boolean {
+    return holidaySeason || day === "tuesday";
+}
+
+function hasOvertimeHours(hoursWorked: number, totalOvertime: number): boolean {
+    const hasHours = hoursWorked > 8 && totalOvertime < 1;
+    return hasHours;
+}
+
